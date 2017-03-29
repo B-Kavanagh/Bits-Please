@@ -11,7 +11,7 @@
 
 <template name="reviews">
 	<h2> The reviews page has loaded </h2>
-    
+    {{> posts}}
 </template>
 
 <template name="community">
@@ -55,6 +55,11 @@
             &q=Manor Street,Mountmellick,Laois" allowfullscreen>
     </iframe>
 
+</template>
+
+<template name="signup">
+    <h2> The signUp page has loaded  </h2>
+    
 </template>
 
 <template name="home">
@@ -164,6 +169,7 @@
 	<table class="table table-bordered">
 		<thead>
 		<tr>
+		    <th>Username</th>
 		    <th>Make</th>	
 		    <th>Model</th>
 		    <th>Age</th>
@@ -174,6 +180,9 @@
 		<tbody>
 		{{#each vehicles}}
 		<tr>
+		    <td>
+			{{user}}
+		    </td>
 		    <td>
 			{{make}}
 		    </td>
@@ -198,14 +207,25 @@
 </template>
 
 <template name="addData">
-    <form id ="addDataForm">
+    <form class ="addDataForm">
 	<h2> Add a new car</h2>
+	<div class="row">
+	    <div class="col-sm-1">
+		<label class="form-control" for="make">Username</label>
+	    </div>
+	    <div class="col-sm-2">
+		<input class="form-control required" type="text"
+		       name="user" placeHolder="Please Enter Username"><br>
+		
+	    </div>
+	</div>
+	
 	<div class="row">
 	    <div class="col-sm-1">
 		<label class="form-control" for="make">Make</label>
 	    </div>
 	    <div class="col-sm-2">
-		<input class="form-control" type="text"
+		<input class="form-control required" type="text"
 		       name="make" placeHolder="Please Enter Make"><br>
 		
 	    </div>
@@ -225,7 +245,7 @@
 		<label class="form-control" for="age">Age</label>
 	    </div>
 	    <div class="col-sm-2">
-		<input class="form-control" type="text"
+		<input class="form-control number" type="text"
 		       name="age" placeHolder="Please Enter Age"><br>
 		
 	    </div>
@@ -235,7 +255,7 @@
 		<label class="form-control" for="mileage">Mileage</label>
 	    </div>
 	    <div class="col-sm-2">
-		<input class="form-control" type="text"
+		<input class="form-control number" type="text"
 		       name="mileage" placeHolder="Please Enter Mileage"><br>
 		
 	    </div>
@@ -305,3 +325,75 @@
   </div>
 </div>
 </template>
+
+<template name="posts">
+	<div class="well col-xs-6 col-xs-offset-3">
+    <div class="row col-xs-10 col-xs-offset-1">
+        <form class="form-horizontal" role="form" id="postForm">
+            <div class="row">
+            <div class="form-group">
+                <div class="col-xs-12" id="well-post">
+                    <textarea class="form-control required" rows="3" id="inputPost"
+                              placeholder="Post a Comment!" maxlength="140"></textarea>
+                    <label id="charRemaining" for="inputPost">{{charsRemaining}}</label>
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                
+                <div class="col-xs-3">
+                    <!--Camera-->
+                    <i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-3">
+                    <!--Video-->
+                    <i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-3">
+                    <i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="col-xs-3">
+                    <button type="submit" class="btn btn-primary">Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</template>
+
+<template name="comments">
+     <form class ="addDataForm">
+	<h2> Add a new comment</h2>
+	<div class="row">
+	    <div class="col-sm-1">
+		<label class="form-control" for="make">Username</label>
+	    </div>
+	    <div class="col-sm-2">
+		<input class="form-control required" type="text"
+		       name="user" placeHolder="Please Enter Username"><br>
+		
+	    </div>
+	</div>
+	
+	<div class="row">
+	    <div class="col-sm-1">
+		<label class="form-control" for="make">Make</label>
+	    </div>
+	    <div class="col-sm-2">
+		<input class="form-control required" type="text"
+		       name="make" placeHolder="Please Enter Make"><br>
+		
+	    </div>
+	</div>
+	
+	
+
+	    <input type="submit" value="save" class="btn btn-primary"> 
+         
+	   
+    </form>
+
+
+</template>
+
+

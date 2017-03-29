@@ -1,11 +1,14 @@
 /* CSS declarations go here */
 
 body {
-    color: white;
+    color: black;
 }
 h1 {
-	color: white;		
+	color: black;		
 }
 h2 {
-	color: white;		
+	color: black;		
+}
+h4 {
+    font-size: 0.60em;
 }
