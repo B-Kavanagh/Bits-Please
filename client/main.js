@@ -32,9 +32,10 @@ Template.addData.events({
 });
 
 
+/*----------------------------------------------------------------------*/
 
 Template.posts.helpers({
-    charsRemaining: function () {
+    charsRemaining: function() {
         return Session.get('CharactersRemaining');
     }
 });
@@ -47,18 +48,23 @@ Template.posts.events({
     'keyup #inputPost': function(event) {
     // Retrieve the contents from the Textarea
         var inputText = event.target.value;
+      //  Posts.insert({obj}, function(err,success){});
         Session.set("CharactersRemaining", (140-inputText.length) + " characters remaining");
     },
-    'submit #postForm': function (event) {
+    'submit #postForm': function(event) {
         event.preventDefault();
         var post = event.target.inputPost.value;
         //Clearing the textarea content
         event.target.reset();
         Session.set("CharactersRemaining", 140 + " characters remaining");
         Meteor.call('insertPost', post);
+      //  Posts.insert({post}, function(err,success){});
     }
 });
 
+
+
+/*-----------------------------------------------------------------------*/
 
 Template.addData.onRendered(function(){ 
 
