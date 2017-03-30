@@ -1,11 +1,30 @@
 /* CSS declarations go here */
 
 body {
-    color: white;
+    color: black;
 }
 h1 {
-	color: white;		
+	color: black;		
 }
 h2 {
-	color: white;		
+	color: black;		
 }
+h4 {
+    font-size: 0.60em;
+}
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+    height: 400px;
+    width: 400px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
+

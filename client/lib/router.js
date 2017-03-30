@@ -11,3 +11,6 @@ Router.route('/hardware');
 Router.route('/top');
 Router.route('/walkthroughs');
 Router.route('/more');
+Router.route('/FalloutPanel')
+Router.route('/BrothersPanel')
+Router.route('/SkyrimPanel')
