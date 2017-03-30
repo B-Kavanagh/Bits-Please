@@ -1,11 +1,245 @@
 /* CSS declarations go here */
 
-body {
+h2{
+    
     color: white;
+    
 }
-h1 {
-	color: white;		
+.jumbotron{
+width: 1150px;
+height: 1000px;
+background-color: black;
 }
-h2 {
-	color: white;		
+
+.jumbotron p{
+
+color: white;
+
+}
+
+.jumbotron h1{
+
+color: whitesmoke;
+
+}
+
+.jumbotronW{
+
+    width:1150px;
+    height: 1660px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronF{
+
+    width:1150px;
+    height: 640px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronR{
+
+    width:1150px;
+    height: 1250px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronE{
+
+    width:1150px;
+    height: 1100px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronS{
+
+    width:1150px;
+    height: 1400px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronH{
+
+    width:1150px;
+    height: 1700px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronSK{
+
+    width:1150px;
+    height: 1900px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronZ{
+
+    width:1150px;
+    height: 1400px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronD{
+
+    width:1150px;
+    height: 1640px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotronRe{
+
+    width:1150px;
+    height: 850px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.jumbotron2{
+
+    width:1150px;
+    height: 640px;
+    background-color: black;
+    opacity: 1;
+    text-align: center;
+
+}
+
+.floated_img
+{
+    float: middle;
+    padding: 0.3em;
+
+}
+
+#rig {
+    max-width:900px;
+    margin:0 auto; /*center aligned*/
+    padding:0;
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+    background-color:#000;
+}
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width:25%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+    /*margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform:scale(1.05);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #3DC0F1 url(img/link.png) no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight:normal!important;
+    top:40%;
+    color:black;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+    #rig li {
+        width:25%;
+    }
+}
+
+@media (max-width: 700px) {
+    #rig li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #rig li {
+        width:50%;
+    }
 }
